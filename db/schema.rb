@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2023_05_04_090937) do
 
   create_table "users", force: :cascade do |t|
@@ -27,4 +28,30 @@ ActiveRecord::Schema.define(version: 2023_05_04_090937) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
+  
+ActiveRecord::Schema.define(version: 2023_05_03_124316) do
+
+  create_table "chatrooms", force: :cascade do |t|
+    t.integer "user_1_id", null: false
+    t.integer "user_2_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_1_id"], name: "index_chatrooms_on_user_1_id"
+    t.index ["user_2_id"], name: "index_chatrooms_on_user_2_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "content"
+    t.integer "user_id", null: false
+    t.integer "chatroom_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
+  add_foreign_key "chatrooms", "user_1s"
+  add_foreign_key "chatrooms", "user_2s"
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
 end
