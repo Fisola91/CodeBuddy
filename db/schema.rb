@@ -10,24 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2023_05_04_090937) do
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "username"
-    t.string "email"
-    t.string "password"
-    t.string "city"
-    t.text "your_story"
-    t.string "community"
-    t.string "interest"
-    t.string "topic"
-    t.string "github_link"
-    t.string "linkedin_link"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
   create_table "chatrooms", force: :cascade do |t|
     t.integer "user_1_id", null: false
@@ -48,8 +31,24 @@ ActiveRecord::Schema.define(version: 2023_05_04_090937) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
-  add_foreign_key "chatrooms", "user_1s"
-  add_foreign_key "chatrooms", "user_2s"
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "username"
+    t.string "email"
+    t.string "password"
+    t.string "city"
+    t.text "your_story"
+    t.string "community"
+    t.string "interest"
+    t.string "topic"
+    t.string "github_link"
+    t.string "linkedin_link"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "chatrooms", "users", column: "user_1_id"
+  add_foreign_key "chatrooms", "users", column: "user_2_id"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
 end
