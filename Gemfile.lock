@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/heartcombo/simple_form.git
+  revision: 921ce9c3fc100e1737125ba1b5a2037c03f2de1b
+  specs:
+    simple_form (5.2.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -234,6 +242,10 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    view_component (2.82.0)
+      activesupport (>= 5.2.0, < 8.0)
+      concurrent-ruby (~> 1.0)
+      method_source (~> 1.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -276,11 +288,13 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   shoulda-matchers (~> 3.1)
+  simple_form!
   simplecov
   spring
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
   tzinfo-data
+  view_component
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)
