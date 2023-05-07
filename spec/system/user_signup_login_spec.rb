@@ -9,6 +9,7 @@ RSpec.describe "User" do
     visit "/"
     click_on "Join now"
     expect(page).to have_text("Create your account")
+    fill_in "Username", with: username
     fill_in "Email", with: email
     fill_in 'user_password', with: password
     fill_in 'user_password_confirmation', with: password
