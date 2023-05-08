@@ -3,13 +3,15 @@
 require "rails_helper"
 
 RSpec.describe NavBarComponent, type: :component do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:component) { described_class.new(current_user: current_user) }
+  let(:current_user) { nil }
 
-  # it "renders something useful" do
-  #   expect(
-  #     render_inline(described_class.new(attr: "value")) { "Hello, components!" }.css("p").to_html
-  #   ).to include(
-  #     "Hello, components!"
-  #   )
-  # end
+  it "displays guest user's navigaton bar" do
+    render_inline(component)
+
+    expect(page).to have_link("Login")
+    expect(page).to have_link("Join now")
+    expect(page).to have_link("About us")
+    expect(page).to have_link("Contact us")
+  end
 end
