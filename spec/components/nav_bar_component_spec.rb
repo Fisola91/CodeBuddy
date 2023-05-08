@@ -14,4 +14,15 @@ RSpec.describe NavBarComponent, type: :component do
     expect(page).to have_link("About us")
     expect(page).to have_link("Contact us")
   end
+
+  context "with current user" do
+    let(:current_user) { FactoryGirl.build(:user) }
+
+    it "displays autheticated user's navigation bar" do
+      render_inline(component)
+
+      expect(page).to have_link("Sign out")
+      expect(page).to have_link("Profile")
+    end
+  end
 end
