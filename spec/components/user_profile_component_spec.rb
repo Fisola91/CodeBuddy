@@ -11,6 +11,7 @@ RSpec.describe UserProfileComponent, type: :component do
       render_inline(component)
 
       expect(page).to have_text(current_user.username)
+      expect(page).to have_link("Edit Profile")
     end
   end
 end
