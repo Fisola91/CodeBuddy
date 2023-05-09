@@ -11,9 +11,13 @@
   </head>
 
   <body>
+    <%= render(NavBarComponent.new(current_user: current_user)) %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
-    <h2>Hi <%= current_user.email %></h2>
+    <% if user_signed_in? %>
+      <h2>Hi <%= current_user.email %></h2>
+      <h2>Hi <%= current_user.username %></h2>
+    <% end %>
   </body>
 </html>

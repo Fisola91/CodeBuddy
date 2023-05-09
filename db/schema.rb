@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_06_073937) do
+ActiveRecord::Schema.define(version: 2023_05_07_094402) do
 
   create_table "chatrooms", force: :cascade do |t|
     t.integer "user_1_id", null: false
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2023_05_06_073937) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

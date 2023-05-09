@@ -1,0 +1,15 @@
+  <% if current_user %>
+    <div class="nav-item">
+      <%= link_to "Home", "#", class: "nav-link" %>
+      <%= link_to "My Buddy", "#", class: "nav-link" %>
+      <%= link_to "Profile", "#", class: "nav-link" %>
+      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+    </div>
+  <% else %>
+    <li class="nav-item">
+      <%= link_to "Login", user_session_path, class: "nav-link" %>
+      <%= link_to "Join now",  new_user_registration_path, class: "nav-link" %>
+      <%= link_to "About us",  "#", class: "nav-link" %>
+      <%= link_to "Contact us",  "#", class: "nav-link" %>
+    </li>
+  <% end %>
