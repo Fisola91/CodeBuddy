@@ -8,7 +8,6 @@ class UsersController < ApplicationController
   end
 
   def update
-    binding.pry
     @user = User.find(params[:id])
     if @user.update(user_params)
       redirect to user_path(@user), notice: "Profile updated successfully."

@@ -28,42 +28,38 @@
       <%= f.input :last_name,
                   required: true,
                   autofocus: true,
-                  # wrapper: :input_group,
                   input_html: { autocomplete: "first_name" }%>
+      <%= f.input :current_password,
+                  required: true,
+                  autofocus: true,
+                  hint: "we need your current password to confirm your changes",
+                  input_html: { autocomplete: "new-password" }%>
       <%= f.input :city,
                   required: false,
-                  # wrapper: :input_group,
                   input_html: { autocomplete: "age" } %>
       <%= f.input :gender,
                   required: false,
-                  # wrapper: :input_group,
                   input_html: { autocomplete: "age" } %>
       <%= f.input :bio,
-              required: false,
-              # wrapper: :input_group,
-              input_html: { autocomplete: "about_me" } %>
+                  required: false,
+                  input_html: { autocomplete: "about_me" } %>
       <%= f.input :linkedin_link,
-              required: false,
-              # wrapper: :input_group,
-              input_html: { autocomplete: "about_me" } %>
+                  required: false,
+                  input_html: { autocomplete: "about_me" } %>
       <%= f.input :github_link,
-              required: false,
-              # wrapper: :input_group,
-              input_html: { autocomplete: "about_me" } %>
+                  required: false,
+                  input_html: { autocomplete: "about_me" } %>
       <%= f.input :programming_languages,
-              # wrapper: :input_group,
-              as: :select,
-              collection: User.languages,
-              multiple: true
-                %>
+                  as: :select,
+                  collection: User.languages,
+                  multiple: true
+                    %>
       <%= f.input :topic_interest,
                   required: false,
-                  # wrapper: :input_group,
                   input_html: { autocomplete: "preferred_date_ideas" } %>
       <%= f.input :communities, collection: %w(Male Female Trans-Man Trans-Woman Non-binary Non-conforming Not-sharing),
                   as: :select,
                   multiple: true,
-                  # wrapper: :input_group,
                   label: 'Communities' %>
     </div>
 

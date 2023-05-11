@@ -2,11 +2,11 @@
   <% if current_user %>
     <div class="profile-card">
       <div class="profile-summary">
-        <h2><%= current_user.username %></h2>
-        <h2><%= current_user.first_name %></h2>
+        <h2><%= username %></h2>
+        <h3><%= first_name %> <%= last_name %></h3>
       </div>
       <div class="edit-profile">
-        <%= link_to "Edit Profile", edit_user_registration_path, class: "profile-link" %>
+        <%= link_to "🖉", edit_user_registration_path, class: "edit-profile-link" %>
       </div>
     </div>
   <% end %>
