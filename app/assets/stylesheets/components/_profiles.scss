@@ -1,0 +1,17 @@
+.profile-container {
+  height: 75vh;
+  width: calc(100vw - 170px);
+  background-color: green;
+  border-radius: 20px;
+  margin-left: 90px;
+}
+
+.profile-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.edit-profile {
+  margin: 10px;
+}
