@@ -1,0 +1,33 @@
+.banner {
+  height: 70vh;
+  width: 90vw;
+  text-align: center;
+  background-color: yellowgreen;
+  padding: 0 auto;
+}
+
+.cards {
+  display:flex;
+  justify-content: space-around;
+}
+
+.card1 {
+  height: 200px;
+  width:200px;
+  border-radius: 10%;
+  background-color: blue;
+}
+
+.card2 {
+  height: 200px;
+  width:200px;
+  border-radius: 20%;
+  background-color: blue;
+}
+
+.card3 {
+  height: 200px;
+  width:200px;
+  border-radius: 20%;
+  background-color: blue;
+}
