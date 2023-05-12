@@ -16,6 +16,7 @@ class UserProfileComponent < ViewComponent::Base
   def last_name
     current_user.last_name
   end
+
   private
 
   attr_reader :current_user

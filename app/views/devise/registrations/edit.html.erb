@@ -16,6 +16,7 @@
       <% end %>
       <%= f.input :username,
                   required: true,
+                  disabled: true,
                   autofocus: true,
                   label: 'Username',
                   # wrapper: :input_group,
@@ -49,10 +50,10 @@
       <%= f.input :github_link,
                   required: false,
                   input_html: { autocomplete: "about_me" } %>
-      <%= f.input :programming_languages,
-                  as: :select,
-                  collection: User.languages,
-                  multiple: true
+      <%= f.association :programming_languages,
+                  as: :check_boxes,
+                  # collection: User.programming_languages,
+                  input_html: {multiple: true }
                     %>
       <%= f.input :topic_interest,
                   required: false,
