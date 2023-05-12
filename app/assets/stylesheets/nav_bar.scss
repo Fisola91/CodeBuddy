@@ -1,0 +1,85 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff, ;
+  color: #fff;
+  padding: 10px;
+}
+
+.nav-item {
+  list-style: none;
+  margin-right: auto;
+}
+
+.nav-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-item a:hover {
+  text-decoration: underline;
+}
+
+/* Add styles to move the navigation links to the right-hand side */
+.nav-links {
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+  background-color: #ba78e1;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Add styles for the card */
+.card {
+   background-color: #f2f2f2;
+border-radius: 10px;
+box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+width: 80%;
+margin: 0 auto;
+padding: 20px;
+height: 800px;
+}
+
+/* Add styles for the heading inside the card */
+.card h2 {
+text-align: center;
+font-size: 3em;
+}
+
+/* Add styles for the login button */
+.login-btn {
+background-color: #eff1f3;
+border-radius: 25px;
+border: none;
+color: black;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+}
+
+/* Add styles for the button container */
+.btn-container {
+display: flex;
+align-items: center;
+}
+
+/* Add styles for spacing between the buttons */
+.btn-container > *:not(:last-child) {
+margin-right: 10px;
+}
