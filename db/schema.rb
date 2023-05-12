@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_07_094402) do
+ActiveRecord::Schema.define(version: 2023_05_11_212036) do
 
   create_table "chatrooms", force: :cascade do |t|
     t.integer "user_1_id", null: false
@@ -31,6 +31,14 @@ ActiveRecord::Schema.define(version: 2023_05_07_094402) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
+  create_table "programming_languages", force: :cascade do |t|
+    t.text "languages"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_programming_languages_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -40,6 +48,16 @@ ActiveRecord::Schema.define(version: 2023_05_07_094402) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "username"
+    t.string "gender"
+    t.string "city"
+    t.text "bio"
+    t.string "linkedin_link"
+    t.string "github_link"
+    t.string "programming_languages"
+    t.string "topic_interest"
+    t.string "communities"
+    t.string "first_name"
+    t.string "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -48,4 +66,5 @@ ActiveRecord::Schema.define(version: 2023_05_07_094402) do
   add_foreign_key "chatrooms", "users", column: "user_2_id"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
+  add_foreign_key "programming_languages", "users"
 end

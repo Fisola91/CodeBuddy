@@ -6,5 +6,10 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:username, :gender, :city, :bio, :first_name, :last_name, :password, :communities, :topic_interest, :programming_languages, :linkedin_link, :github_link])
+  end
+
+  def user_root_path
+    user_path(current_user)
   end
 end

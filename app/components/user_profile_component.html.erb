@@ -1,0 +1,20 @@
+<div class="profile-container">
+  <% if current_user %>
+    <div class="profile-card">
+      <div class="profile-summary">
+        <h2><%= username %></h2>
+        <h3><%= first_name %> <%= last_name %></h3>
+      </div>
+      <div class="edit-profile">
+        <%= link_to "🖉", edit_user_registration_path, class: "edit-profile-link" %>
+      </div>
+    </div>
+        <h3><%= current_user.city %></h3>
+        <h4><%= current_user.bio %></h4>
+    <div class="profile-interest">
+      <h5>programming languages</h5>
+      <h5>Communities</h5>
+      <h5>Topic of interests</h5>
+    </div>
+  <% end %>
+</div>
