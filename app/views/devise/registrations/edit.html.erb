@@ -52,12 +52,13 @@
       <%= f.input :programming_languages,
                   as: :select,
                   collection: User::LANGUAGES,
-                  input_html: {multiple: true }
+                  include_hidden: false,
+                  input_html: {multiple: true}
                     %>
       <%= f.input :topic_interest,
-                  collection: ["Web Development", "Data Science"],
-                  label: 'Your topics of interest',
-                  input_html: { multiple: true } %>
+                  as: :select,
+                  collection: ["Web Development", "Data Science"]
+                   %>
     </div>
 
       <div class="actions">

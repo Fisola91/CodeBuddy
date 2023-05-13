@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   serialize :programming_languages, Array
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

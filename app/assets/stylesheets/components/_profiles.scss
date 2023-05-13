@@ -36,19 +36,22 @@ body {
 
 .profile-summary h2 {
   margin-bottom: 0;
+  margin-left: 102px;
 }
 
-.profile-summary h3 {
+.profile-summary p {
   margin-top: 2px;
+  margin-left: 102px
 }
 
 .profile-interest {
   display: flex;
   width: 500px;
-  justify-content:space-around
+  justify-content:space-around;
+  margin-left: 50px;
 }
 
-.user-profile-language p {
+.user-profile-interest p {
   height: 30px;
   width: 130px;
   border: 1px solid;
@@ -58,4 +61,8 @@ body {
   text-align: center;
   padding-top: .5em;
   margin: 2px;
+}
+
+.bio-city {
+  margin-left: 102px
 }
