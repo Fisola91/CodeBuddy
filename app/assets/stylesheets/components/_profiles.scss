@@ -43,7 +43,19 @@ body {
 }
 
 .profile-interest {
-  width: calc(100vw - 500px);
   display: flex;
+  width: 500px;
   justify-content:space-around
+}
+
+.user-profile-language p {
+  height: 30px;
+  width: 130px;
+  border: 1px solid;
+  border-radius: 20px;
+  background-color: white;
+  flex: 1;
+  text-align: center;
+  padding-top: .5em;
+  margin: 2px;
 }

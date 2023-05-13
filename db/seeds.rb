@@ -20,3 +20,14 @@ tim = User.create!(
   password: "123456",
   password_confirmation: "123456",
 )
+
+scoal = User.create!(
+  username: "Timo",
+  first_name: "Tim",
+  last_name: "Henderson",
+  email: "sc@gmail.com",
+  gender: "male",
+  bio: "Avid sports fan and participant, loves attending and organizing local sports events.",
+  password: "123456",
+  password_confirmation: "123456",
+)

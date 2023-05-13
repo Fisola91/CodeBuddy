@@ -12,9 +12,20 @@
         <h3><%= current_user.city %></h3>
         <h4><%= current_user.bio %></h4>
     <div class="profile-interest">
-      <h5>programming languages</h5>
-      <h5>Communities</h5>
-      <h5>Topic of interests</h5>
+      <div class="user-profile-language">
+        <h5>programming languages</h5>
+        <% current_user.programming_languages.each_with_index do |language, index|  %>
+          <% next if index == 0 %>
+          <p><%= language %></p>
+        <% end %>
+      </div>
+      <div class="user-profile-language">
+        <h5>Topic of interest</h5>
+        <% topic_interest.each_with_index do |topic, index|  %>
+          <% next if index == 0 %>
+          <p><%= topic %></p>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>

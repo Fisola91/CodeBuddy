@@ -34,4 +34,11 @@ RSpec.describe "User" do
     expect(page).to have_link("Sign up")
     expect(page).to have_link("Forgot your password?")
   end
+
+  it "can visit the homepage without signing in" do
+    visit "/"
+
+    expect(page).to have_text("Stop quitting")
+    expect(page).to have_text("How it works")
+  end
 end
