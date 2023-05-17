@@ -17,6 +17,10 @@ class UserProfileComponent < ViewComponent::Base
     current_user.last_name
   end
 
+  # def topic_interest
+  #   JSON.parse(current_user.topic_interest)
+  # end
+
   private
 
   attr_reader :current_user

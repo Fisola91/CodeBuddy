@@ -36,14 +36,33 @@ body {
 
 .profile-summary h2 {
   margin-bottom: 0;
+  margin-left: 102px;
 }
 
-.profile-summary h3 {
+.profile-summary p {
   margin-top: 2px;
+  margin-left: 102px
 }
 
 .profile-interest {
-  width: calc(100vw - 500px);
   display: flex;
-  justify-content:space-around
+  width: 500px;
+  justify-content:space-around;
+  margin-left: 50px;
+}
+
+.user-profile-interest p {
+  height: 30px;
+  width: 130px;
+  border: 1px solid;
+  border-radius: 20px;
+  background-color: white;
+  flex: 1;
+  text-align: center;
+  padding-top: .5em;
+  margin: 2px;
+}
+
+.bio-city {
+  margin-left: 102px
 }

@@ -3,18 +3,32 @@
     <div class="profile-card">
       <div class="profile-summary">
         <h2><%= username %></h2>
-        <h3><%= first_name %> <%= last_name %></h3>
+        <p><%= first_name %> <%= last_name %></p>
       </div>
       <div class="edit-profile">
         <%= link_to "🖉", edit_user_registration_path, class: "edit-profile-link" %>
       </div>
     </div>
-        <h3><%= current_user.city %></h3>
-        <h4><%= current_user.bio %></h4>
+      <div class="bio-city">
+        <p><%= current_user.city %></p>
+        <p><%= current_user.bio %></p>
+      </div>
     <div class="profile-interest">
-      <h5>programming languages</h5>
-      <h5>Communities</h5>
-      <h5>Topic of interests</h5>
+      <div class="user-profile-interest">
+        <h5>programming languages</h5>
+        <div class="language">
+          <% current_user.programming_languages.each_with_index do |language, index|  %>
+            <% next if index == 0 %>
+            <p><%= language %></p>
+          <% end %>
+        </div>
+      </div>
+      <div class="user-profile-interest">
+        <h5>Topic of interest</h5>
+        <div class="topic">
+        <p><%= current_user.topic_interest%></p>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>

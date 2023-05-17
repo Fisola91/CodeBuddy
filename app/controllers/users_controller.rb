@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect to user_path(@user), notice: "Profile updated successfully."
+      redirect to user_path(@user)
     else
       render :edit
     end
