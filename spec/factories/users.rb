@@ -7,6 +7,5 @@ FactoryBot.define do
     password_confirmation {"123456"}
     bio {"A Ruby lover"}
     topic_interest { "Data Science "}
-    programming_languages { ["Python", "Ruby"] }
   end
 end
