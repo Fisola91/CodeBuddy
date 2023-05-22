@@ -23,6 +23,7 @@ RSpec.describe NavBarComponent, type: :component do
 
       expect(page).to have_link("Sign out")
       expect(page).to have_link("Profile")
+      expect(page).to have_link("Dashboard")
     end
   end
 end
