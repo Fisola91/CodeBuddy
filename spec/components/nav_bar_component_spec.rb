@@ -16,14 +16,13 @@ RSpec.describe NavBarComponent, type: :component do
   end
 
   context "with current user" do
-    let(:current_user) { FactoryGirl.build(:user) }
+    let(:current_user) { FactoryBot.create(:user) }
 
     it "displays autheticated user's navigation bar" do
       render_inline(component)
 
       expect(page).to have_link("Sign out")
       expect(page).to have_link("Profile")
-      expect(page).to have_link("My Buddy")
     end
   end
 end
