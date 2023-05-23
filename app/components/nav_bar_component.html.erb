@@ -4,12 +4,9 @@
       <strong style="color: blue; font-size: 24px;">CodeBuddy</strong>
     </div>
     <div class="nav-buttons" style="float: right;">
-      <%= link_to "Home", "#", class: "nav-link" %>
-      <%= link_to "My Buddy", "#", class: "nav-link" %>
-      <%= link_to "Profile", user_path(current_user.id), class: "nav-link" %>
-      <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-      <%= link_to "Login", user_session_path, class: "nav-button" %>
-      <%= link_to "Join now", new_user_registration_path, class: "nav-button" %>
+      <%= link_to "Dashboard", "#", class: "nav-link" %>
+      <%= link_to "Profile", user_path(current_user.id), class: "profile-link" %>
+      <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "logout-link" %>
     </div>
   </div>
 <% else %>
@@ -18,10 +15,8 @@
       <strong style="color: blue; font-size: 24px;">CodeBuddy</strong>
     </div>
     <div class="nav-buttons" style="float: right;">
-      <%= link_to "Home", "#", class: "nav-link" %>
-      <%= link_to "My Buddy", "#", class: "nav-link" %>
-      <%= link_to "Profile", "#", class: "nav-link" %>
-      <%= link_to "Sign out", "#", class: "nav-link" %>
+      <%= link_to "About us", "#", class: "nav-link" %>
+      <%= link_to "Contact us", "#", class: "nav-link" %>
       <%= link_to "Login", user_session_path, class: "nav-button rounded-button" %>
       <%= link_to "Join now", new_user_registration_path, class: "nav-button rounded-button" %>
     </div>

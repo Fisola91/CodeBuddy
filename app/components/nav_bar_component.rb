@@ -7,5 +7,6 @@ class NavBarComponent < ViewComponent::Base
   end
 
   private
+
   attr_reader :current_user
 end
